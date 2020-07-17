@@ -1,16 +1,14 @@
-# annoying_snake
+# Annoying Snake
 
-A new Flutter project.
+![annoying snake](https://user-images.githubusercontent.com/50237142/87815500-fff94600-c865-11ea-9986-ad0d535eef5e.png)
 
-## Getting Started
+# What is "Annoying snake" ? 
+Annoying snake is a sub-project for the "Ludis"(Newton's pendulum) project , made in flutter.
 
-This project is a starting point for a Flutter application.
+The purpose of this sub-project is to demonstrate the usage of the Draggable widget.
 
-A few resources to get you started if this is your first Flutter project:
+## Main Idea
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+Shockingly for some people , Snakes like eating eggs. In our project , you can drag the egg all-over the screen , while the annoying Python snake tries to reach the egg and eats it. 
+if the snake reaches the egg , the player loses. the more time you drag the egg all over the screen , the higher your score will be.
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
