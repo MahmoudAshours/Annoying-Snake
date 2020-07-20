@@ -15,7 +15,7 @@ class _HomeScreenState extends State<HomeScreen> {
   double snakedy = 100;
   int _counter = 0;
   AudioCache player;
-  
+
   @override
   void initState() {
     player = AudioCache();
@@ -40,23 +40,28 @@ class _HomeScreenState extends State<HomeScreen> {
           Positioned(
             top: dy,
             left: dx,
-            child: Draggable(
-              feedback: Egg(),
-              affinity: Axis.horizontal,
-              onDragStarted: () {
-                _counter++;
-                print(_counter);
+            child: GestureDetector(
+              onLongPressMoveUpdate: (d) {
+                print(d.globalPosition);
               },
-              onDragEnd: (details) {
-                setState(() {
-                  dx = details.offset.dx;
-                  dy = details.offset.dy;
-                  snakedx = details.offset.dx;
-                  snakedy = details.offset.dy - 40;
-                });
-              },
-              childWhenDragging: SizedBox.shrink(),
-              child: Egg(),
+              child: Draggable(
+                feedback: Egg(),
+                affinity: Axis.horizontal,
+                onDragStarted: () {
+                  _counter++;
+                  print(_counter);
+                },
+                onDragEnd: (details) {
+                  setState(() {
+                    dx = details.offset.dx;
+                    dy = details.offset.dy;
+                    snakedx = details.offset.dx;
+                    snakedy = details.offset.dy - 40;
+                  });
+                },
+                childWhenDragging: SizedBox.shrink(),
+                child: Egg(),
+              ),
             ),
           ),
         ],
